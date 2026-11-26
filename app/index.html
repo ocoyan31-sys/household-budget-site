@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HomeLedger — Household Budget</title>
+<meta name="description" content="HomeLedger is a simple, private household budget planner: track income and spending, set monthly budgets, save toward goals, and see where every dollar goes.">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="#/">
+      <span class="brand-mark" aria-hidden="true">$</span>
+      <span class="brand-name">HomeLedger</span>
+      <span class="brand-tag">household budget</span>
+    </a>
+    <nav class="mainnav" aria-label="Main navigation">
+      <a href="#/" data-nav="dashboard">Dashboard</a>
+      <a href="#/transactions" data-nav="transactions">Transactions</a>
+      <a href="#/add" data-nav="add">Add entry</a>
+      <a href="#/budgets" data-nav="budgets">Budgets</a>
+      <a href="#/goals" data-nav="goals">Savings goals</a>
+      <a href="#/report" data-nav="report">Monthly report</a>
+    </nav>
+    <div class="month-picker">
+      <label for="month-select">Month</label>
+      <select id="month-select" aria-label="Choose month"></select>
+    </div>
+  </div>
+</header>
+<main id="app" class="wrap" aria-live="polite"></main>
+<footer class="wrap page-footer">
+  <p>HomeLedger keeps your budget on your own device — entries are stored in this
+  browser only, nothing is uploaded anywhere. Use <a href="#/add">Add entry</a> to
+  record money in or out, <a href="#/budgets">Budgets</a> to cap a category, and
+  <a href="#/goals">Savings goals</a> to plan ahead.</p>
+  <p><button type="button" id="reset-data" class="link-button">Reset to the example household</button>
+  <span class="muted">· restores the seeded example data and clears your changes.</span></p>
+</footer>
+<script type="module" src="./main.js"></script>
+</body>
+</html>
